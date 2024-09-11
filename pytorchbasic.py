@@ -115,6 +115,7 @@ MyToTensor(lambda y: torch.zeros(10, dtype=torch.float).scatter_(dim=0, index=to
 #after dataset is turned into a pytorch dataset, dataloader instance can be defined from this class
 #shuffles and create batches for neural network
 torch.utils.data.DataLoader(dataset=dataset, batch_size = batch_size, shuffle = True) #num_workers -> faster data loading #samplers to control, shuffles and data order
+#collate_fn -> applies a function to each batch
 #return index, (input_batch, label_batch)
 #neural network 
 torch.nn #package of layers, activation function, and loss functions #also includes containers that addresses the whole network
